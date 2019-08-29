@@ -17,8 +17,8 @@ class MyChromeWebScraper:
     def __init__(self):
         pass
 
-
-    def scrap(self, url, nbr_clicks, xpath):
+    @staticmethod
+    def scrap(url, nbr_clicks, xpath):
         i = 0
         MyChromeWebScraper.driver.get(url)
 
@@ -38,6 +38,6 @@ class MyChromeWebScraper:
 
         return page_source
 
-
-    def kill_driver(self):
+    @staticmethod
+    def kill_driver():
         MyChromeWebScraper.driver.quit()
