@@ -14,11 +14,13 @@ class MyChromeWebScraper:
     OPTIONS.add_argument('--headless')
     driver = webdriver.Chrome('chromedriver.exe', options = OPTIONS)
 
+    page_source = []
+
     def __init__(self):
         pass
 
-    @staticmethod
-    def scrap(url, nbr_clicks, xpath):
+
+    def scrap(self, url, xpath, nbr_clicks = 10):
         i = 0
         MyChromeWebScraper.driver.get(url)
 
