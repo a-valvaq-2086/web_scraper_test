@@ -1,9 +1,14 @@
 from WebScraper import MyChromeWebScraper
 from HtmlParser import MyHtmlParser
 from DataFrameCleaner import MyDataFrameCleaner
-import sys 
+import sys
 
-"""This is the minimum working example for my news headline web scraper"""
+"""This is the minimum working example for my news headline web scraper
+    TODO: 1) Configure __setup__.py with the required packages for this module (numpy, pandas, 
+    bs4 and Selenium)
+    2) Handle erros with I/O exceptions for .csv reading and writing
+    3) Implement URL input, and improve the XPATH and HTML's body search
+"""
 
 def call_scraper(url, XPATH, nbr_clicks):
     """Simply calls the Chrome Driver to Scrape the desired web
